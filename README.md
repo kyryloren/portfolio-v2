@@ -48,6 +48,7 @@ A quick look at the top-level files and directories.
 ```sh
   .
   ├── node_modules # modules
+  ├── content # the actual text of the website
   ├── src # source folder
       └── components # main components
           └── layouts
