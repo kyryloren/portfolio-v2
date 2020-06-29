@@ -85,11 +85,11 @@ A quick look at the top-level files and directories.
  ## 🎨 Color Reference
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
-| Black          | ![#090C02](https://via.placeholder.com/10/090C02?text=+) `#0a192f` |
-| Darker         | ![#141414](https://via.placeholder.com/10/141414?text=+) `#172a45` |
-| Purple Navy    | ![#5E548E](https://via.placeholder.com/10/5E548E?text=+) `#303C55` |
-| Dark Red       | ![#D64045](https://via.placeholder.com/10/D64045?text=+) `#8892b0` |
-| Light Red      | ![#FE4A49](https://via.placeholder.com/10/FE4A49?text=+) `#a8b2d1` |
-| Lighter        | ![#f2f2f2](https://via.placeholder.com/10/f2f2f2?text=+) `#ccd6f6` |
-| White          | ![#FDFFFC](https://via.placeholder.com/10/FDFFFC?text=+) `#e6f1ff` |
-| Accent         | ![#F397D6](https://via.placeholder.com/10/F397D6?text=+) `#64ffda` |
+| Black          | ![#090C02](https://via.placeholder.com/10/090C02?text=+) `#090C02` |
+| Darker         | ![#141414](https://via.placeholder.com/10/141414?text=+) `#141414` |
+| Purple Navy    | ![#5E548E](https://via.placeholder.com/10/5E548E?text=+) `#5E548E` |
+| Dark Red       | ![#D64045](https://via.placeholder.com/10/D64045?text=+) `#D64045` |
+| Light Red      | ![#FE4A49](https://via.placeholder.com/10/FE4A49?text=+) `#FE4A49` |
+| Lighter        | ![#f2f2f2](https://via.placeholder.com/10/f2f2f2?text=+) `#f2f2f2` |
+| White          | ![#FDFFFC](https://via.placeholder.com/10/FDFFFC?text=+) `#FDFFFC` |
+| Accent         | ![#F397D6](https://via.placeholder.com/10/F397D6?text=+) `#F397D6` |
