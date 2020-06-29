@@ -1,22 +1,99 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import PropTypes from 'prop-types';
+import Hero from '@sections/hero';
+import About from '@sections/about';
+import Projects from '@sections/projects';
+import Github from '@sections/Github';
+import Contact from '@sections/contact';
+import styled from '@emotion/styled';
+import { Main } from '@styles';
+import { useGlobalStateContext } from '../context/globalContext';
+import { graphql } from 'gatsby';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const StyledMainContainer = styled(Main)`
+  counter-reset: section;
+`;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const HomePage = ({ data }) => {
+  const { state, dispatch } = useGlobalStateContext();
+  const onCursor = (cursorType) => {
+    cursorType =
+      (state.cursorStyles.includes(cursorType) && cursorType) || false;
+    dispatch({ type: 'CURSOR_TYPE', cursorType: cursorType });
+  };
 
-export default IndexPage
+  return (
+    <StyledMainContainer className="fillHeight">
+      <Hero onCursor={onCursor} />
+      <About onCursor={onCursor} data={data.about.edges} />
+      <Projects onCursor={onCursor} data={data.projects.edges} />
+      <Github onCursor={onCursor} data={data.github.edges} />
+      <Contact onCursor={onCursor} />
+    </StyledMainContainer>
+  );
+};
+
+export default HomePage;
+
+HomePage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export const pageQuery = graphql`
+  {
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+          }
+          html
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/projects/" } }
+      sort: { fields: frontmatter___date }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                fluid(
+                  maxWidth: 700
+                  quality: 90
+                  traceSVG: { color: "#64ffda" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+            tech
+            github
+            external
+          }
+          html
+        }
+      }
+    }
+    github: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/github/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tech
+            github
+            external
+          }
+          html
+        }
+      }
+    }
+  }
+`;
