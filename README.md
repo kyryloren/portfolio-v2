@@ -43,8 +43,8 @@
     ```
 4. Start the local server
     ```shell
-    gatsby develop #for local dev
-    gatsby build && gatsby serve # for production
+    gatsby develop # local dev server
+    gatsby build && gatsby serve # local prod server
     ```
 
 1.  **Open the source code and start editing!**
