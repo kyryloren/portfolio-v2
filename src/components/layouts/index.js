@@ -8,9 +8,9 @@ import CustomCursor from '@components/customCursor';
 import { isMobile } from 'react-device-detect';
 
 //components
-import Nav from '@components/Nav';
+import Nav from '@components/nav';
 import Head from './Head';
-import Footer from '@components/Footer';
+import Footer from '@components/footer';
 import { useGlobalStateContext } from '../../context/globalContext';
 
 export default ({ children }) => {
