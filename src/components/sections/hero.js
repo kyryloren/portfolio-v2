@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { socialMedia } from '@utils/config';
 
 // styles and animation
 import styled from '@emotion/styled';
@@ -83,13 +84,20 @@ const Hero = ({ onCursor }) => {
   return (
     <StyledContainer hero>
       <motion.div variants={parent} initial="initial" animate="animate">
-        <PfpWrapper
-          variants={pfpAnim}
-          onMouseEnter={() => onCursor('hovered')}
-          onMouseLeave={() => onCursor()}
-          whileHover={{ opacity: 1, scale: 1.2 }}
-          whileTap={{ scale: 0.8 }}
-        />
+        <a
+          href={socialMedia[0].url}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <PfpWrapper
+            variants={pfpAnim}
+            onMouseEnter={() => onCursor('pointer')}
+            onMouseLeave={() => onCursor()}
+            whileHover={{ opacity: 1, scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+          />
+        </a>
         <motion.h1 className="big-title" variants={child}>
           <motion.div
             style={{ display: 'inline' }}
@@ -99,8 +107,7 @@ const Hero = ({ onCursor }) => {
               👋
             </span>{' '}
             Hey I'm Kyryl
-            <ThemeToggle onCursor={onCursor} />
-            , a passionate developer based in{' '}
+            <ThemeToggle onCursor={onCursor} />, a passionate developer based in{' '}
           </motion.div>
           <HoverImage onCursor={onCursor} imageSource={NY}>
             <OpacityChange

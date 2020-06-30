@@ -92,7 +92,7 @@ const About = ({ onCursor, data }) => {
     }
   }, [animation, contentAnim, inView]);
 
-  const { frontmatter, html } = data[0].node;
+  const { frontmatter } = data[0].node;
   const { title } = frontmatter;
 
   const string = Array.from(title);
@@ -178,8 +178,101 @@ const About = ({ onCursor, data }) => {
                   },
                 },
               }}
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            >
+              Hey, my name is Kyrylo, but you already knew that. I was born in
+              Ukraine and grew up in New York. I first picked up coding when I
+              was 8 and learned to make my first game in Unity.
+            </motion.p>
+            <motion.p
+              variants={{
+                before: {
+                  opacity: 0,
+                  y: 50,
+                  left: 100,
+                  rotate: 20,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+                after: {
+                  opacity: 1,
+                  y: 0,
+                  left: 0,
+                  rotate: 0,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+              }}
+              s
+            >
+              I've always had a natural curiosty for the unknown and have always
+              strived to educate myself on how things work and why they do.
+            </motion.p>
+            <motion.p
+              variants={{
+                before: {
+                  opacity: 0,
+                  y: 50,
+                  left: 100,
+                  rotate: 20,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+                after: {
+                  opacity: 1,
+                  y: 0,
+                  left: 0,
+                  rotate: 0,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+              }}
+              s
+            >
+              At a young age I taught myself how to code and never had a reason
+              to stop. I'm still as passionate as the day I started and
+              constanly expanding my skillset.
+            </motion.p>
+            <motion.p
+              variants={{
+                before: {
+                  opacity: 0,
+                  y: 50,
+                  left: 100,
+                  rotate: 20,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+                after: {
+                  opacity: 1,
+                  y: 0,
+                  left: 0,
+                  rotate: 0,
+                  transition: {
+                    type: 'spring',
+                    damping: 16,
+                    stiffness: 200,
+                  },
+                },
+              }}
+              s
+            >
+              "Here's a few technologies that I know.
+            </motion.p>
           </ContentWrapper>
           <ContentWrapper
             animate={contentAnim}

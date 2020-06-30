@@ -41,7 +41,7 @@ export default ({ children }) => {
           {!isMobile && <CustomCursor />}
           <Nav onCursor={onCursor} />
           <div id="content">{children}</div>
-          <Footer />
+          <Footer onCursor={onCursor} />
         </>
       )}
     />
