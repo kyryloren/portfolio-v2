@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: config.name,
         short_name: `starter`,
         start_url: `/`,
         background_color: config.backgroundColor,
