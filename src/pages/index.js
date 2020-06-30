@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Hero from '@sections/hero';
 import About from '@sections/about';
 import Projects from '@sections/projects';
-import Github from '@sections/Github';
+import Github from '@sections/github';
 import Contact from '@sections/contact';
 import styled from '@emotion/styled';
 import { Main } from '@styles';
