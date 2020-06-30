@@ -9,6 +9,15 @@
 <p align="center">
   The second version of my personal website, built with <a href="https://www.gatsbyjs.org" target="_blank">Gatsby</a> and hosted with <a href="https://www.netlify.com" target="_blank">Netlify</a>.
 </p>
+<p align="center">
+  Previous versions:
+  <a href="https://github.com/kyryloren/portfolio-v1" target="_blank">Version 1</a>
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/kyrylo-v2/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/1ac3bde1-3734-42e0-bb97-d6a43b866500/deploy-status" alt="Netlify status" />
+  </a>
+</p>
 
 ![hero](https://i.imgur.com/7Z0d8ZI.png)
 
