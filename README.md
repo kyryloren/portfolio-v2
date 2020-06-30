@@ -20,7 +20,7 @@
   </a>
 </p>
 
-![hero](https://i.imgur.com/7Z0d8ZI.png)
+![hero](https://i.imgur.com/cTrgblt.png)
 
 ## 🚀 Installing
 
