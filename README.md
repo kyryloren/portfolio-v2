@@ -16,6 +16,7 @@
 <p align="center">
   <a href="https://app.netlify.com/sites/kyrylo-v2/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/1ac3bde1-3734-42e0-bb97-d6a43b866500/deploy-status" alt="Netlify status" />
+    <a href="https://deepscan.io/dashboard#view=project&tid=9434&pid=12647&bid=197096"><img src="https://deepscan.io/api/teams/9434/projects/12647/branches/197096/badge/grade.svg" alt="DeepScan grade"></a>
   </a>
 </p>
 
@@ -42,8 +43,8 @@
     ```
 4. Start the local server
     ```shell
-    gatsby develop #for local dev
-    gatsby build && gatsby serve # for production
+    gatsby develop # local dev server
+    gatsby build && gatsby serve # local prod server
     ```
 
 1.  **Open the source code and start editing!**
